@@ -12,7 +12,7 @@
     height: 100vh;
     overflow: hidden;
 
-    background-image: url("/sources/absolut_neve.webp");
+    background-image: url("./sources/absolut_neve.webp");
     background-size: contain;
     background-repeat: no-repeat;
 }
