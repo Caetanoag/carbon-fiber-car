@@ -4,7 +4,7 @@
 corrossel é o resumo do conteudo no site
 */
 
-import { staticHtmlServer } from "./js/staticHtmlServer.js";
+import { staticHtmlServer } from "staticHtmlServer.js";
 
 const baseUrl = new URL("./html/", window.location.href).href;
 
