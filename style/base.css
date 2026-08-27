@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 11vh;
+    scroll-behavior: smooth;
+}
+
+#carrossel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    background-image: url("/sources/absolut_neve.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.itens {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itens img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.tittle_carrossel, .impacto_carrossel, .desc_carrossel, .ver_carrossel {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin-left: 5%;
+    color: var(--surface-color);
+}
+
+.tittle_carrossel {
+    padding-top: 20%;
+    font-size: 3.5em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 0;
+}
+
+.impacto_carrossel {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-top: 0.2em;
+}
+
+.desc_carrossel {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-top: 10px;
+}
+
+.ver_carrossel {
+    margin-top: 20px;
+}
+
+.ver_carrossel button {
+    border: none;
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ver_carrossel button:hover {
+    letter-spacing: 3px;
+    background-color: var(--accent-hover);
+    color: var(--surface-color);
+}
