@@ -4,16 +4,25 @@
 corrossel é o resumo do conteudo no site
 */
 
-import { staticHtmlServer } from "./staticHtmlServer.js";
+import { StaticHtmlServer } from "./StaticHtmlServer.js";
+import { ThemeSwitcher } from "./ThemeSwitcher.js";
 
 const baseUrl = new URL("./html/", window.location.href).href;
 
-const carrosselLoader = new staticHtmlServer("Carrossel", document.querySelector('#carrossel'), `${baseUrl}carrossel.html`);
-const formLoader = new staticHtmlServer("Form", document.querySelector("#forms"), `${baseUrl}form.html`);
-const navBarLoader = new staticHtmlServer("NavBar", document.querySelector('nav'), `${baseUrl}navbar.html`);
-const footerLoader = new staticHtmlServer("Footer", document.querySelector('footer'), `${baseUrl}footer.html`);
+const carrosselLoader = new StaticHtmlServer("Carrossel", document.querySelector('#carrossel'), `${baseUrl}carrossel.html`);
+const formLoader = new StaticHtmlServer("Form", document.querySelector("#forms"), `${baseUrl}form.html`);
+const navBarLoader = new StaticHtmlServer("NavBar", document.querySelector('nav'), `${baseUrl}navbar.html`);
+const footerLoader = new StaticHtmlServer("Footer", document.querySelector('footer'), `${baseUrl}footer.html`);
 
 formLoader.loadElement();
 carrosselLoader.loadElement();
 navBarLoader.loadElement();
 footerLoader.loadElement();
+
+setTimeout(() => {
+  const themeSwitcher = new ThemeSwitcher(
+    document.documentElement,
+    document.querySelector("#theme-toggle")
+  );
+  themeSwitcher.loadFromLocalStorage();
+}, 100);
