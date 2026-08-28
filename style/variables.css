@@ -1,42 +1,41 @@
 :root {
     --font-size: 1.5rem;
 }
-:root, [data-theme="light"] { /*---------------------TEMA CLARO!!!!!!!!!!!!!!----------------------------*/
 
+:root, [data-theme="light"] {
     /* Backgrounds */
-    --bg-primary: #F4F7FA;       /* Fundo principal (branco levemente azulado) */
-    --bg-secondary: #E5E9F0;     /* Fundo secundário (Nord light grey) */
-    --surface-color: #FFFFFF;    /* Fundo de cartões/elementos */
+    --bg-primary: #F4F7FA;
+    --bg-secondary: #E5E9F0;
+    --surface-color: #FFFFFF;
 
-    /* Textos (Alto Contraste) */
-    --text-primary: #2E3440;     /* Texto principal (Nord polar night - quase preto) */
-    --text-secondary: #4C566A;   /* Texto secundário */
+    /* Textos */
+    --text-primary: #2E3440;
+    --text-secondary: #4C566A;
 
-    /* Acentos (Azul Nordico) */
-    --accent-color: #5E81AC;     /* Azul escuro Nord */
-    --accent-hover: #81A1C1;     /* Azul claro Nord para hover */
+    /* Acentos */
+    --accent-color: #5E81AC;
+    --accent-hover: #81A1C1;
 
     /* Bordas e UI */
-    --border-color: #D8DEE9;     /* Borda sutil */
+    --border-color: #D8DEE9;
     --shadow-color: rgba(46, 52, 64, 0.1);
-  }
+}
 
-  [data-theme="dark"] {/*-------------------------TEMA ESCURO!!!!!!!!!!!111---------------------*/
+[data-theme="dark"] {
+    /* Backgrounds (Nord Polar Night - Escurecidos para contraste) */
+    --bg-primary: #242933;       /* Um pouco mais escuro que o Nord original (#2E3440) */
+    --bg-secondary: #2E3440;     /* Fundo secundário oficial (Nord0) */
+    --surface-color: #3B4252;    /* Fundo de cartões (Nord1) */
 
-    /* Backgrounds */
-    --bg-primary: #0A0A0A;       /* Preto profundo (Asfalto escuro) */
-    --bg-secondary: #141414;     /* Cinza muito escuro (Fibra de carbono) */
-    --surface-color: #1A1A1A;    /* Fundo de cartões */
+    /* Textos (Nord Snow Storm - Alto Contraste) */
+    --text-primary: #ECEFF4;     /* Branco gelo mais claro (Nord6) para leitura perfeita */
+    --text-secondary: #D8DEE9;   /* Cinza azulado claro (Nord4) */
 
-    /* Textos (Alto Contraste) */
-    --text-primary: #FFFFFF;     /* Branco puro para texto principal */
-    --text-secondary: #B3B3B3;   /* Cinza claro para leitura confortável */
-
-    /* Acentos (Laranja) */
-    --accent-color: #FF6600;     /* Laranja vibrante (Luzes/detalhes traseiros) */
-    --accent-hover: #FF8533;     /* Laranja um pouco mais claro para hover */
+    /* Acentos (Nord Frost) */
+    --accent-color: #88C0D0;     /* Azul ciano vibrante (Nord8) - Excelente contraste no escuro */
+    --accent-hover: #8FBCBB;     /* Ciano esverdeado (Nord7) para hover */
 
     /* Bordas e UI */
-    --border-color: #333333;     /* Borda escura */
-    --shadow-color: rgba(0, 0, 0, 0.5);
-  }
+    --border-color: #434C5E;     /* Borda visível, mas sutil (Nord2) */
+    --shadow-color: rgba(0, 0, 0, 0.35);
+}
