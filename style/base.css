@@ -43,7 +43,7 @@ body {
 .desc_carrossel,
 .ver_carrossel {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     max-width: 700px;
     margin-left: 5%;
     color: var(--surface-color);
