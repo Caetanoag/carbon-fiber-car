@@ -63,13 +63,11 @@ input[type="radio"]:checked::before {
 }
 
 #carrossel {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-
-    background-image: url("../sources/jesko_skill_neve.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .itens {
@@ -77,16 +75,16 @@ input[type="radio"]:checked::before {
     width: 100%;
     height: 100%;
 }
-
 .itens img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-    z-index: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  z-index: 0;
 }
+
 
 .tittle_carrossel,
 .impacto_carrossel,
@@ -94,28 +92,29 @@ input[type="radio"]:checked::before {
 .ver_carrossel {
     position: relative;
     z-index: 3;
-    max-width: 700px;
+    max-width: min(700px, 90%);
     margin-left: 5%;
-    color: var(--accent-color);
+    color: rgba(255, 255, 255);
 }
 
 .tittle_carrossel {
     padding-top: 20%;
-    font-size: 3.5em;
+    font-size: clamp(2rem, 8vw, 4.5rem);
     font-weight: bold;
     line-height: 1.2em;
     margin-bottom: 0;
 }
 
 .impacto_carrossel {
-    font-size: 1.8em;
+    font-size: clamp(1.2rem, 3vw, 2rem);
     font-weight: bold;
     color: var(--accent-color);
     margin-top: 0.2em;
 }
 
 .desc_carrossel {
-    font-size: 1em;
+font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+
     line-height: 1.5em;
     margin-top: 10px;
 }
@@ -131,7 +130,9 @@ input[type="radio"]:checked::before {
     font-family: inherit;
     font-weight: 800;
     letter-spacing: 2px;
-    padding: 12px 24px;
+    padding: 14px 28px;
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    min-height: 48px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -145,7 +146,7 @@ input[type="radio"]:checked::before {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 97.5vh;
+    height: 100%;
     background: linear-gradient(
         to right,
         rgba(0, 0, 0, 1) 0%,
@@ -159,11 +160,25 @@ input[type="radio"]:checked::before {
     z-index: 2;
     animation: appear 2.5s;
 }
-
-
 .impacto_carrossel {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
+
+#carrossel .btn-hero {
+  position: absolute;
+  top: 90%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+#carrossel .btn-hero:first-of-type { right: 20px; }
+#carrossel .btn-hero:last-of-type { left: 20px; }
+
 
 /*Parte da nav bar ----------------------------------------------------------------------------*/
 
@@ -232,12 +247,13 @@ nav {
     grid-area: busca;
     display: flex;
     align-items: center;
-    flex-shrink: 0;
+    flex-shrink: 1;
     background-color: var(--bg-secondary);
     border: 1px solid var(--border-color);
     border-radius: 20px;
     overflow: hidden;
-    width: 220px;
+    width: 100%;
+    max-width: 220px;
     height: 36px;
     padding: 0 12px;
 }
@@ -368,3 +384,21 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
+@media (max-width: 600px) {
+  .tittle_carrossel,
+  .impacto_carrossel,
+  .desc_carrossel,
+  .ver_carrossel {
+    margin-left: 0;
+    padding: 0 1.5rem;
+    text-align: center;
+    max-width: 100%;
+  }
+  #carrossel .tittle_carrossel {
+      margin-top: 11vh;
+  }
+}
+@media (max-width: 600px) {
+  #carrossel .btn-hero {
+      display: none;
+  }
