@@ -14,15 +14,15 @@ const formLoader = new StaticHtmlServer("Form", document.querySelector("#forms")
 const navBarLoader = new StaticHtmlServer("NavBar", document.querySelector('nav'), `${baseUrl}navbar.html`);
 const footerLoader = new StaticHtmlServer("Footer", document.querySelector('footer'), `${baseUrl}footer.html`);
 
-formLoader.loadElement();
-carrosselLoader.loadElement();
-navBarLoader.loadElement();
-footerLoader.loadElement();
-
-setTimeout(() => {
+async function init() {
+  await formLoader.loadElement();
+  await carrosselLoader.loadElement();
+  await navBarLoader.loadElement();
+  await footerLoader.loadElement();
   const themeSwitcher = new ThemeSwitcher(
     document.documentElement,
     document.querySelector("#theme-toggle")
   );
   themeSwitcher.loadFromLocalStorage();
-}, 100);
+}
+init();
