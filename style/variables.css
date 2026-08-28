@@ -1,38 +1,41 @@
+:root {
+    --font-size: 1.5rem;
+}
 :root, [data-theme="light"] { /*---------------------TEMA CLARO!!!!!!!!!!!!!!----------------------------*/
-    
+
     /* Backgrounds */
     --bg-primary: #F4F7FA;       /* Fundo principal (branco levemente azulado) */
     --bg-secondary: #E5E9F0;     /* Fundo secundário (Nord light grey) */
     --surface-color: #FFFFFF;    /* Fundo de cartões/elementos */
-    
+
     /* Textos (Alto Contraste) */
     --text-primary: #2E3440;     /* Texto principal (Nord polar night - quase preto) */
     --text-secondary: #4C566A;   /* Texto secundário */
-    
+
     /* Acentos (Azul Nordico) */
     --accent-color: #5E81AC;     /* Azul escuro Nord */
     --accent-hover: #81A1C1;     /* Azul claro Nord para hover */
-    
+
     /* Bordas e UI */
     --border-color: #D8DEE9;     /* Borda sutil */
     --shadow-color: rgba(46, 52, 64, 0.1);
   }
-  
+
   [data-theme="dark"] {/*-------------------------TEMA ESCURO!!!!!!!!!!!111---------------------*/
-    
+
     /* Backgrounds */
     --bg-primary: #0A0A0A;       /* Preto profundo (Asfalto escuro) */
     --bg-secondary: #141414;     /* Cinza muito escuro (Fibra de carbono) */
     --surface-color: #1A1A1A;    /* Fundo de cartões */
-    
+
     /* Textos (Alto Contraste) */
     --text-primary: #FFFFFF;     /* Branco puro para texto principal */
     --text-secondary: #B3B3B3;   /* Cinza claro para leitura confortável */
-    
+
     /* Acentos (Laranja) */
     --accent-color: #FF6600;     /* Laranja vibrante (Luzes/detalhes traseiros) */
     --accent-hover: #FF8533;     /* Laranja um pouco mais claro para hover */
-    
+
     /* Bordas e UI */
     --border-color: #333333;     /* Borda escura */
     --shadow-color: rgba(0, 0, 0, 0.5);
