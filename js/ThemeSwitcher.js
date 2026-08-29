@@ -17,6 +17,11 @@ export class ThemeSwitcher {
     } else {
       throw new Error("Invalid Theme");
     }
+    if (theme === "dark") {
+      this.button.checked = false;
+    } else {
+      this.button.checked = true;
+    }
     localStorage.setItem("theme-preference", theme);
   }
 
