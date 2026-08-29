@@ -212,7 +212,10 @@ nav {
     width: auto;
     display: block;
 }
-
+#logo_nav:hover {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
 #muda_tema {
     grid-area: tema;
     display: flex;
