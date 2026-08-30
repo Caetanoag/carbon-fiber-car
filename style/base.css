@@ -521,14 +521,14 @@ footer .icon-content a[data-social="github"] ~ .tooltip {
 	background-color: #24262a;
 }
 
-/*Page Sections ------------------------------------------------*/
+/*Sections-------------------------------------------------*/
 .page-section .section-content {
 	padding: 20px;
 	background-color: var(--bg-secondary);
 	overflow: auto;
 }
 
-#section-img {
+.section-img {
 	float: right;
 	width: auto;
 	height: auto;
@@ -539,10 +539,105 @@ footer .icon-content a[data-social="github"] ~ .tooltip {
 	object-fit: contain;
 }
 
-#section-title {
+.section-title {
 	color: var(--accent-color);
 	margin-top: 0;
 }
+
+#fibra-de-carbono, #jesko, #naval, #aero{
+	position: relative;
+	padding: 4rem;
+	overflow: hidden;
+}
+
+#fibra-de-carbono, #naval {
+	background-color: var(--bg-primary);
+}
+#jesko, #aero {
+	background-color: var(--bg-secondary);
+}
+
+.page-section {
+	position: relative;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.section-content {
+	position: relative;
+	z-index: 1;
+	background-color: var(--surface-color);
+	border: 2px solid var(--border-color);
+	border-radius: 12px;
+	padding: 2.5rem;
+	box-shadow: 0 4px 12px var(--shadow-color);
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#jesko .section-content, #aero .section-content {
+	background-color: var(--surface-color);
+}
+
+.section-content:hover {
+	border-color: var(--accent-color);
+}
+
+.desc_section {
+	color: var(--accent-color);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 700;
+	font-size: clamp(0.65rem, 2vw, 0.85rem);
+	margin-top: 2vh;
+	margin-bottom: 5vh;
+}
+
+.section-title {
+	display: inline-block;
+	color: var(--text-primary);
+	border-bottom: 4px solid #2c3e6b;
+	padding-bottom: 0.5rem;
+	margin-bottom: 1.5rem;
+	letter-spacing: -0.3px;
+}
+
+.section-img {
+	border-radius: 10px;
+	border: 1px solid var(--border-color);
+	box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+#jesko .section-img, #aero .section-img {
+	float: left;
+	margin-left: 0;
+	margin-right: 20px;
+}
+
+.sub-section-content {
+	margin-top: 1.5rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--border-color);
+}
+
+.sub-section-content:first-of-type {
+	margin-top: 0;
+	padding-top: 0;
+	border-top: none;
+}
+
+.sub-section-content h3 {
+	color: var(--accent-color);
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-size: clamp(0.65rem, 2vw, 0.85rem);
+	margin-bottom: 0.5rem;
+}
+
+.sub-section-content p {
+	line-height: 1.7;
+	color: var(--text-secondary);
+}
+
 /*KeyFrames de toda página -------------------------------------*/
 @keyframes gradientShift {
 	0% {
@@ -609,7 +704,7 @@ footer .icon-content a[data-social="github"] ~ .tooltip {
 		display: grid;
 		grid-template-columns: 1fr;
 	}
-	#section-img {
+	.section-img {
 		float: none;
 		width: auto;
 		height: auto;
@@ -636,5 +731,21 @@ footer .icon-content a[data-social="github"] ~ .tooltip {
 @media (max-width: 600px) {
 	#carrossel .btn-hero {
 		display: none;
+	}
+}
+
+@media (max-width: 850px) {
+	#fibra-de-carbono, #jesko, #naval, #aero {
+		padding: 2.5rem 5%;
+	}
+	.section-content {
+		padding: 1.5rem;
+	}
+	.section-content img {
+		margin-top: 3vh;
+		margin-bottom: 1vh;
+		justify-self: center;
+		max-height:35vh;
+		width: auto;
 	}
 }
