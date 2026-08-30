@@ -520,6 +520,29 @@ footer .icon-content a[data-social="github"] .filled,
 footer .icon-content a[data-social="github"] ~ .tooltip {
 	background-color: #24262a;
 }
+
+/*Page Sections ------------------------------------------------*/
+.page-section .section-content {
+	padding: 20px;
+	background-color: var(--bg-secondary);
+	overflow: auto;
+}
+
+#section-img {
+	float: right;
+	width: auto;
+	height: auto;
+	max-width: 400px;
+	max-height: 400px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	object-fit: contain;
+}
+
+#section-title {
+	color: var(--accent-color);
+	margin-top: 0;
+}
 /*KeyFrames de toda página -------------------------------------*/
 @keyframes gradientShift {
 	0% {
@@ -553,14 +576,14 @@ footer .icon-content a[data-social="github"] ~ .tooltip {
 	}
 }
 @keyframes texto {
-    from {
-        opacity: 0;
-        translate: 50vh 0;
-    }
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+	from {
+		opacity: 0;
+		translate: 50vh 0;
+	}
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
 }
 
 /*Media Queries ------------------------------------------------*/
@@ -579,6 +602,21 @@ footer .icon-content a[data-social="github"] ~ .tooltip {
 @media (min-width: 900px) {
 	.radio-selection {
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+}
+@media (max-width: 850px) {
+	.page-section .section-content {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	#section-img {
+		float: none;
+		width: auto;
+		height: auto;
+		max-width: 50vw;
+		order: 2;
+		object-fit: cover;
+		margin: auto auto;
 	}
 }
 @media (max-width: 600px) {
