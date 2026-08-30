@@ -36,12 +36,33 @@ const carbonFiberSectionLoader = new StaticHtmlServer(
 	`${baseUrl}sections/section.carbon.html`,
 );
 
+const jeskoSectionLoader = new StaticHtmlServer(
+	"Section - Jesko",
+	document.querySelector("#jesko"),
+	`${baseUrl}sections/section.jesko.html`,
+);
+
+const navalSectionLoader = new StaticHtmlServer(
+	"Section - Naval",
+	document.querySelector("#naval"),
+	`${baseUrl}sections/section.naval.html`,
+);
+
+const aeroSectionLoader = new StaticHtmlServer(
+	"Section - Aero",
+	document.querySelector("#aero"),
+	`${baseUrl}sections/section.aero.html`,
+);
+
 async function init() {
 	await formLoader.loadElement();
 	await carrosselLoader.loadElement();
 	await navBarLoader.loadElement();
 	await footerLoader.loadElement();
 	await carbonFiberSectionLoader.loadElement();
+	await jeskoSectionLoader.loadElement();
+	await navalSectionLoader.loadElement();
+	await aeroSectionLoader.loadElement();
 	const themeSwitcher = new ThemeSwitcher(
 		document.documentElement,
 		document.querySelector("#theme-toggle"),
