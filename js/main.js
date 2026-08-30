@@ -4,6 +4,7 @@
 corrossel é o resumo do conteudo no site
 */
 
+import { handleForm } from "./FormHandler.js";
 import { StaticHtmlServer } from "./StaticHtmlServer.js";
 import { ThemeSwitcher } from "./ThemeSwitcher.js";
 
@@ -68,5 +69,7 @@ async function init() {
 		document.querySelector("#theme-toggle"),
 	);
 	themeSwitcher.loadFromLocalStorage();
+
+	handleForm();
 }
 init();

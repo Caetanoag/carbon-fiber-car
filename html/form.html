@@ -5,20 +5,20 @@
             <h3>Qual a classificação da fibra de carbono?</h3>
             <div class="radio-selection">
                 <div class="option-radio">
-                    <input type="radio" name="tipo-fibraC" id="tipo-simples" />
+                    <input type="radio" name="tipo-fibraC" id="tipo-simples" value="tipo_simples"/>
                     <label for="tipo-simples">Composto simples</label>
                 </div>
                 <div class="option-radio">
-                    <input type="radio" name="tipo-fibraC" id="tipo-base" />
+                    <input type="radio" name="tipo-fibraC" id="tipo-base" value="tipo_base"/>
                     <label for="tipo-base">Base</label>
                 </div>
                 
                 <div class="option-radio">
-                    <input type="radio" name="tipo-fibraC" id="tipo-oxido" />
+                    <input type="radio" name="tipo-fibraC" id="tipo-oxido" value="tipo_oxido"/>
                     <label for="tipo-oxido">Oxido</label>
                 </div>
                 <div class="option-radio">
-                    <input type="radio" name="tipo-fibraC" id="tipo-sal" />
+                    <input type="radio" name="tipo-fibraC" id="tipo-sal" value="tipo_sal"/>
                     <label for="tipo-sal">Sal</label>
                 </div>
             </div>
@@ -31,6 +31,7 @@
                         type="radio"
                         name="elemento-fibraC"
                         id="elemento-carbono"
+                        value="elemento_carbono"
                     />
                     <label for="elemento-carbono">Carbono</label>
                 </div>
@@ -39,6 +40,7 @@
                         type="radio"
                         name="elemento-fibraC"
                         id="elemento-helio"
+                        value="elemento_helio"
                     />
                     <label for="elemento-helio">Hélio</label>
                 </div>
@@ -47,6 +49,7 @@
                         type="radio"
                         name="elemento-fibraC"
                         id="elemento-oxigenio"
+                        value="elemento_oxigenio"
                     />
                     <label for="elemento-oxigenio">Oxigênio</label>
                 </div>
@@ -55,11 +58,54 @@
                         type="radio"
                         name="elemento-fibraC"
                         id="elemento-cobre"
+                        value="elemento_cobre"
                     />
                     <label for="elemento-cobre">Cobre</label>
                 </div>
             </div>
         </div>
+        <div id="form-section3" class="form-i-section">
+            <h3>Qual a velocidade máxima do Jesko Absolut?</h3>
+            <div class="radio-selection">
+                <div class="option-radio">
+                    <input
+                        type="radio"
+                        name="velocidade-Jesko"
+                        id="velocidade-531"
+                        value="velocidade_531"
+                    />
+                    <label for="velocidade-531">531 km/h</label>
+                </div>
+                <div class="option-radio">
+                    <input
+                        type="radio"
+                        name="velocidade-Jesko"
+                        id="velocidade-578"
+                        value="velocidade_578"
+                    />
+                    <label for="velocidade-578">578 km/h</label>
+                </div>
+                <div class="option-radio">
+                    <input
+                        type="radio"
+                        name="velocidade-Jesko"
+                        id="velocidade-424"
+                        value="velocidade_424"
+                    />
+                    <label for="velocidade-424">424 km/h</label>
+                </div>
+                <div class="option-radio">
+                    <input
+                        type="radio"
+                        name="velocidade-Jesko"
+                        id="velocidade-352"
+                        value="velocidade_352"
+                    />
+                    <label for="velocidade-352">352 km/h</label>
+                </div>
+            </div>
+        </div>
         <button type="submit" id="form-submit" class="form-btn">Enviar</button>
+        <div class="form-result"></div>
     </form>
 </div>
