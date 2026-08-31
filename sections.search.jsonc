@@ -1,0 +1,32 @@
+{
+    "sections": [
+            {
+                "name": "Fibra de Carbono",
+                "id": "fibra-de-carbono",
+                "type": "Substance",
+                "description": "Descrição da substancia da fibra de carbono",
+                "keywords": ["Substancia", "Carbono", "Fibra", "Leve", "Ligacao", "Simples", "Matriz", "Duravel"]
+            },
+            {
+                "name": "Aeronautica",
+                "id": "aero",
+                "type": "Application",
+                "description": "Aplicacoess da fibra de carbono na aeronautica",
+                "keywords": ["Aeronautica", "Boeing", "787", "Aviao", "Aeronave", "Carbono"]
+            },
+            {
+                "name": "Naval",
+                "id": "naval",
+                "type": "Application",
+                "description": "Aplicacoess da fibra de carbono na engenharia naval",
+                "keywords": ["Naval", "CF", "520", "Barco", "Iate", "Honeycomb", "IM", "Navio", "Carbono"]
+            },
+            {
+                "name": "Automobilismo",
+                "id": "jesko",
+                "type": "Application",
+                "description": "Aplicacoess da fibra de carbono no carro Jesko Absolut",
+                "keywords": ["AutomobilismO", "Carro", "Hiper", "Hipercarro", "Jesko", "Absolut", "Carbono"]
+            }
+        ]
+}

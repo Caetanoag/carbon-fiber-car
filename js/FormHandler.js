@@ -3,7 +3,7 @@ const rightAnswers = {
 	rightElement: "elemento_carbono",
 	rightSpeed: "velocidade_531",
 };
-export const handleForm = () => {
+export const handleForm = async () => {
 	const form = document.querySelector(".form-box");
 	document.querySelector("#form-submit").addEventListener("click", (e) => {
 		let howManyRight = 0;

@@ -21,7 +21,7 @@ h3 {
 	font-size: clamp(0.7rem, 3vw, 1.2rem);
 }
 p {
-	font-size: clamp(0.5rem, 2vw, 1rem);
+	font-size: 1rem
 }
 input[type="radio"] {
 	appearance: none;
@@ -336,45 +336,54 @@ input:checked + .slider:before {
 	padding: 8px 16px;
 }
 
+
 #divbusca {
 	grid-area: busca;
 	display: flex;
-	align-items: center;
-	flex-shrink: 1;
-	background-color: var(--bg-secondary);
-	border: 1px solid var(--border-color);
+	flex-direction: column;
 	border-radius: 20px;
-	overflow: hidden;
-	width: 100%;
-	max-width: 220px;
-	height: 36px;
-	padding: 0 12px;
+	border: 2px solid var(--border-color);
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: border-color 0.3s;
 }
-
-#txtbusca {
+#divbusca:hover{
+	border: 2px solid var(--accent-color)
+}
+#divbusca form{
+	display: flex;
+	align-items: center;
 	flex: 1;
-	min-width: 0;
-	height: 100%;
+}
+#txt-busca {
+	margin-left: 5px;
 	background-color: transparent;
 	border: none;
 	outline: none;
 	font-style: italic;
 	font-size: 14px;
 	color: var(--text-primary);
+	align-self: center;
 }
 
-#txtbusca::placeholder {
+#txt-busca::placeholder {
 	color: var(--text-secondary);
 }
-
-#btnbusca {
-	width: 16px;
-	height: 16px;
-	flex-shrink: 0;
-	margin-left: 8px;
-	cursor: pointer;
+#txt-submit {
+	background-color: transparent;
+	outline: none;
+	border-color: transparent;
+	margin-right: 0;
 }
 
+#search-result a{
+	text-decoration: none;
+	color: var(--text-primary)
+}
+#search-result ul{
+	list-style: none;
+}
 /*Formulário ---------------------------------------------------*/
 .form-section,
 .form-div {
@@ -472,7 +481,7 @@ footer {
 		var(--surface-color)
 	);
 	background-size: 300% 300%;
-	animation: gradientShift 16s ease infinite;
+	animation: gradientShift 4s ease infinite;
 	border: 3px solid var(--border-color);
 	padding: 2rem;
 }

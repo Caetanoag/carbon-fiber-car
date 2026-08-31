@@ -7,7 +7,7 @@ corrossel é o resumo do conteudo no site
 import { handleForm } from "./FormHandler.js";
 import { StaticHtmlServer } from "./StaticHtmlServer.js";
 import { ThemeSwitcher } from "./ThemeSwitcher.js";
-
+import { handleSearch } from "./Search.js";
 const baseUrl = new URL("./html/", window.location.href).href;
 
 const carrosselLoader = new StaticHtmlServer(
@@ -70,6 +70,7 @@ async function init() {
 	);
 	themeSwitcher.loadFromLocalStorage();
 
-	handleForm();
+	await handleForm();
+	await handleSearch();
 }
 init();
