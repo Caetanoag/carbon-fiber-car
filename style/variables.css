@@ -1,41 +1,35 @@
 :root {
-    --font-size: 1.5rem;
+	--font-family: "Lexend Exa", sans-serif;
+	--font-size: 1.5rem;
 }
 
-:root, [data-theme="light"] {
-    /* Backgrounds */
-    --bg-primary: #F4F7FA;
-    --bg-secondary: #E5E9F0;
-    --surface-color: #FFFFFF;
+:root,
+[data-theme="light"] {
+	--bg-primary: #f4f7fa;
+	--bg-secondary: #e5e9f0;
+	--surface-color: #ffffff;
 
-    /* Textos */
-    --text-primary: #2E3440;
-    --text-secondary: #4C566A;
+	--text-primary: #2e3440;
+	--text-secondary: #4c566a;
 
-    /* Acentos */
-    --accent-color: #5E81AC;
-    --accent-hover: #81A1C1;
+	--accent-color: #5e81ac;
+	--accent-hover: #81a1c1;
 
-    /* Bordas e UI */
-    --border-color: #D8DEE9;
-    --shadow-color: rgba(46, 52, 64, 0.1);
+	--border-color: #d8dee9;
+	--shadow-color: rgba(46, 52, 64, 0.1);
 }
 
 [data-theme="dark"] {
-    /* Backgrounds (Nord Polar Night - Escurecidos para contraste) */
-    --bg-primary: #242933;       /* Um pouco mais escuro que o Nord original (#2E3440) */
-    --bg-secondary: #2E3440;     /* Fundo secundário oficial (Nord0) */
-    --surface-color: #3B4252;    /* Fundo de cartões (Nord1) */
+	--bg-primary: #242933;
+	--bg-secondary: #2e3440;
+	--surface-color: #3b4252;
 
-    /* Textos (Nord Snow Storm - Alto Contraste) */
-    --text-primary: #ECEFF4;     /* Branco gelo mais claro (Nord6) para leitura perfeita */
-    --text-secondary: #D8DEE9;   /* Cinza azulado claro (Nord4) */
+	--text-primary: #eceff4;
+	--text-secondary: #d8dee9;
 
-    /* Acentos (Nord Frost) */
-    --accent-color: #88C0D0;     /* Azul ciano vibrante (Nord8) - Excelente contraste no escuro */
-    --accent-hover: #8FBCBB;     /* Ciano esverdeado (Nord7) para hover */
+	--accent-color: #88c0d0;
+	--accent-hover: #8fbcbb;
 
-    /* Bordas e UI */
-    --border-color: #434C5E;     /* Borda visível, mas sutil (Nord2) */
-    --shadow-color: rgba(0, 0, 0, 0.35);
+	--border-color: #434c5e;
+	--shadow-color: rgba(0, 0, 0, 0.35);
 }
