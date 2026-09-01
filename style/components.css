@@ -60,7 +60,8 @@
 	margin-top: 20px;
 }
 
-.ver_carrossel button {
+.ver_carrossel a {
+	text-decoration: none;
 	border: none;
 	background-color: var(--surface-color);
 	color: var(--text-primary);
@@ -72,9 +73,10 @@
 	min-height: 48px;
 	cursor: pointer;
 	transition: 0.3s;
+	margin-bottom: 20px;
 }
 
-.ver_carrossel button:hover {
+.ver_carrossel a:hover {
 	letter-spacing: 3px;
 	background-color: var(--accent-hover);
 	color: var(--surface-color);
